@@ -44,16 +44,19 @@
     "typescript": "~2.2.0"
   },
   "description": "angualr 4 test project",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@bitbucket.org/codercanfly/angular4test.git"
-  },
   "keywords": [
     "angualr",
     "4",
     "test",
     "project"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sparklingshan/angular4test.git"
+  },
   "author": "",
-  "homepage": "https://bitbucket.org/codercanfly/angular4test#readme"
+  "bugs": {
+    "url": "https://github.com/sparklingshan/angular4test/issues"
+  },
+  "homepage": "https://github.com/sparklingshan/angular4test#readme"
 }
