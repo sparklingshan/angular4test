@@ -1,13 +1,18 @@
 import { TestBed, async } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { HomeComponent } from './home.component';
+import { DataService } from '../../services/data/data.service';
+
 
 describe('HomeComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [FormsModule],
       declarations: [
         HomeComponent
       ],
+      providers: [DataService]
     }).compileComponents();
   }));
 
