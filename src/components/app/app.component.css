@@ -9,8 +9,10 @@
 
 .header {
     background-color: #d3d3d3;
-    height: calc(10vw + 30px);
+    height: calc(3vw + 60px);
     position: absolute;
     top: 0;
     width: 100%;
+    font-size: calc(0.5vw + 12px);
+    padding-left: 5%;
 }
