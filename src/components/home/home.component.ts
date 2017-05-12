@@ -9,9 +9,16 @@ import { DataService } from '../../services/data/data.service';
 export class HomeComponent {
     title = 'home page';
     todos = [];
-
+    todoSearchName = '';
     constructor(private data: DataService) {
         this.todos = data.getTodoList();
-    }
-    
+    };
+    todoSearch() {
+        if (this.todoSearchName.length === 0) {
+            this.todos = this.data.getTodoList();
+            return;
+        }
+        this.todos = [];
+        this.todos = this.data.getTodosByName(this.todoSearchName);
+    };
 }
