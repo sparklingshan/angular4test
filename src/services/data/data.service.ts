@@ -22,9 +22,11 @@ const todolist: Todo[] = [
 
 @Injectable()
 export class DataService {
+
     getTodoList() {
         return todolist;
     };
+    
     getTodosByName(name: string) {
         let result: Todo[] = [];
         todolist.forEach(t => {

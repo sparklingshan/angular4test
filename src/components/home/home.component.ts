@@ -10,9 +10,11 @@ export class HomeComponent {
     title = 'home page';
     todos = [];
     todoSearchName = '';
+    
     constructor(private data: DataService) {
         this.todos = data.getTodoList();
     };
+
     todoSearch() {
         if (this.todoSearchName.length === 0) {
             this.todos = this.data.getTodoList();
