@@ -1,0 +1,16 @@
+#app-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 0;
+}
+
+.header {
+    background-color: #d3d3d3;
+    height: calc(10vw + 30px);
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
