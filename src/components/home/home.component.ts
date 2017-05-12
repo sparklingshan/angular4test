@@ -13,4 +13,5 @@ export class HomeComponent {
     constructor(private data: DataService) {
         this.todos = data.getTodoList();
     }
+    
 }

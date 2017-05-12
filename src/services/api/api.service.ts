@@ -5,10 +5,7 @@ export class ApiService {
   username = 'guest';
   pwd = 'guest';
   token = '';
-  
-  logout(){
+  logout() {
     this.token = '';
   }
-
-
 }

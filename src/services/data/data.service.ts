@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 
-class todo {
+class Todo {
     name: string;
     description: string;
 }
 
-var todolist: todo[] = [
+const todolist: Todo[] = [
     { name: 'todo1', description: 'todo 1 description' },
     { name: 'todo2', description: 'todo 2 description' },
     { name: 'todo3', description: 'todo 3 description' },
@@ -18,15 +18,20 @@ var todolist: todo[] = [
     { name: 'todo10', description: 'todo 10 description' },
     { name: 'todo11', description: 'todo 11 description' },
     { name: 'todo12', description: 'todo 12 description' }
-]
+];
 
 @Injectable()
 export class DataService {
-    constructor() { }
     getTodoList() {
         return todolist;
-    }
-    getTodoByName(name: string){
-        
-    }
+    };
+    getTodoByName(name: string) {
+        let result: Todo = null;
+        todolist.forEach(t => {
+            if (t.name === name) {
+                result = t;
+            }
+        });
+        return result;
+    };
 }
