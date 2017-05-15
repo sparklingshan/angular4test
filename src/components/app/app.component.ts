@@ -13,9 +13,11 @@ export class AppComponent {
   constructor(private router: Router) {
 
   }
+
   logoClick() {
     this.router.navigateByUrl('/home');
   }
+  
   ngOnInit() {
     let userButton = document.querySelector('#user-button');
     if (session.login !== null) {
