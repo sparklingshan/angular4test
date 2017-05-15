@@ -1,3 +1,4 @@
 export const session = {
-    login: null
+    login: null,
+    user: ''
 }

@@ -17,11 +17,24 @@
     padding-left: 5%;
 }
 
-.header #user-button {
+#user-button {
     color: black;
     position: absolute;
     right: 10%;
     top: 39%;
     cursor: pointer;
-    text-decoration: underline;
+}
+
+#user-button:hover {
+    opacity: 0.5;
+}
+
+#logo {
+    cursor: pointer;
+    z-index: 99;
+    width: 50%;
+}
+
+#logo:hover {
+    opacity: 0.5;
 }
