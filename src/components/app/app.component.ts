@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { session } from '../../services/api/user.session';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app header';
+
+  ngOnInit() {
+    let userButton = document.querySelector('#user-button');
+    if (session.login !== null) {
+
+    } else {
+      userButton.textContent = 'login';
+    }
+  }
 }

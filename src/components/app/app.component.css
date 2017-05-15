@@ -16,3 +16,12 @@
     font-size: calc(0.5vw + 12px);
     padding-left: 5%;
 }
+
+.header #user-button {
+    color: black;
+    position: absolute;
+    right: 10%;
+    top: 39%;
+    cursor: pointer;
+    text-decoration: underline;
+}
