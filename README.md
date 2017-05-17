@@ -4,8 +4,8 @@
 
 # This is the front-end structrue test includes
 
-    -data binding,
-    -form validation,
-    -user login/logout,
+    -data binding
+    -form validation
     -routing
     -redux states control
+    -api services
