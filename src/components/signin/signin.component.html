@@ -3,13 +3,13 @@
         <div>
             <label for="username">Username</label>
             <input type="email" name="email" [(ngModel)]="model.email" #email="ngModel" required />
-            <div *ngIf="f.submitted && !email.valid">Username is required</div>
+            <div *ngIf="f.submitted && !email.valid" style="color: red">Username is required</div>
         </div>
         <br>
         <div>
             <label for="password">Password</label>
             <input type="password" name="password" [(ngModel)]="model.password" #password="ngModel" required />
-            <div *ngIf="f.submitted && !password.valid">Password is required</div>
+            <div *ngIf="f.submitted && !password.valid" style="color: red">Password is required</div>
         </div>
         <br>
         <button>Login</button>
