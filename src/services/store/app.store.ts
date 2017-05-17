@@ -5,7 +5,8 @@ const USER_LOGIN = "USER_LOGIN";
 
 //store
 const initialStates = {
-    userToken: null
+    userToken: null,
+    currentUser: null
 }
 
 //reducer
@@ -13,17 +14,18 @@ function appReducer(state = initialStates, action) {
     switch (action.type) {
         case USER_LOGIN:
             return Object.assign({}, state, {
-                userToken: action.token
+                userToken: action.user.token,
+                currentUser: action.user.email
             });
     }
     return state;
 }
 
 //action
-export const userLogin = function (token) {
+export const userLogin = function (user) {
     return {
         type: USER_LOGIN,
-        token
+        user
     }
 }
 

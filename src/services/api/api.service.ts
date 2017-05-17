@@ -9,12 +9,15 @@ export class ApiService {
   token = '';
 
   logout() {
-
+    store.dispatch(userLogin(null));
   }
 
   login(user) {
     if (user.email === this.email && user.password === this.pwd) {
-      store.dispatch(userLogin('guest+guest'));
+      store.dispatch(userLogin({
+        token: 'guest+guest',
+        email: user.email
+      }));
     }
   }
 }

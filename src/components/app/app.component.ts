@@ -11,6 +11,7 @@ import { store } from '../../services/store/app.store';
 export class AppComponent {
   title = 'app header';
   session = store.getState().userToken;
+  link = 'login'
   constructor(private router: Router) {
 
   }
@@ -23,11 +24,7 @@ export class AppComponent {
     let userButton = document.querySelector('#user-button');
     store.subscribe(() => {
       this.session = store.getState().userToken;
+      this.link = store.getState().currentUser;
     });
-    if (this.session !== null) {
-
-    } else {
-      userButton.textContent = 'login';
-    }
   }
 }
