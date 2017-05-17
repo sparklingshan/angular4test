@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { session } from '../../services/api/user.session';
 
+import { store } from '../../services/store/app.store';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +10,7 @@ import { session } from '../../services/api/user.session';
 })
 export class AppComponent {
   title = 'app header';
+  session = store.getState().userToken;
   constructor(private router: Router) {
 
   }
@@ -17,13 +18,16 @@ export class AppComponent {
   logoClick() {
     this.router.navigateByUrl('/home');
   }
-  
+
   ngOnInit() {
     let userButton = document.querySelector('#user-button');
-    if (session.login !== null) {
-      userButton.textContent = session.user;
+    if (this.session !== null) {
+
     } else {
       userButton.textContent = 'login';
     }
+    store.subscribe(() => {
+      this.session = store.getState().userToken;
+    });
   }
 }

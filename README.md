@@ -8,3 +8,4 @@
     -form validation,
     -user login/logout,
     -routing
+    -redux states control
