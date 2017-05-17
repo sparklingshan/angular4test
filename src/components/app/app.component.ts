@@ -21,13 +21,13 @@ export class AppComponent {
 
   ngOnInit() {
     let userButton = document.querySelector('#user-button');
+    store.subscribe(() => {
+      this.session = store.getState().userToken;
+    });
     if (this.session !== null) {
 
     } else {
       userButton.textContent = 'login';
     }
-    store.subscribe(() => {
-      this.session = store.getState().userToken;
-    });
   }
 }

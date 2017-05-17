@@ -20,7 +20,7 @@ function appReducer(state = initialStates, action) {
 }
 
 //action
-function userLogin(token) {
+export const userLogin = function (token) {
     return {
         type: USER_LOGIN,
         token

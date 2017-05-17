@@ -1,5 +1,5 @@
 <div id="signin-page">
-    <form (ngSubmit)="f.form.valid && login()" #f="ngForm">
+    <form (ngSubmit)="f.form.valid && login()" #f="ngForm" *ngIf="session === null">
         <div>
             <label for="username">Username</label>
             <input type="email" name="email" [(ngModel)]="model.email" #email="ngModel" required />

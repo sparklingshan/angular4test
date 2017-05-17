@@ -1,11 +1,20 @@
 import { Injectable } from '@angular/core';
 
+import { store, userLogin } from '../store/app.store';
+
 @Injectable()
 export class ApiService {
-  username = 'guest';
+  email = 'guest@guest.com';
   pwd = 'guest';
   token = '';
+
   logout() {
-    this.token = '';
+
+  }
+
+  login(user) {
+    if (user.email === this.email && user.password === this.pwd) {
+      store.dispatch(userLogin('guest+guest'));
+    }
   }
 }
