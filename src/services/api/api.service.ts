@@ -11,7 +11,7 @@ export class ApiService {
   logout() {
     store.dispatch(userLogin({
       token: null,
-      currentUser: 'login'
+      email: 'login'
     }));
   }
 

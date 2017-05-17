@@ -16,5 +16,6 @@
     </form>
     <div *ngIf="session !== null">
         <h2>Hello {{user}}</h2>
+        <button (click)="logout()">logout</button>
     </div>
 </div>

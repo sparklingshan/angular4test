@@ -28,4 +28,11 @@ export class SigninComponent {
     login() {
         this.api.login(this.model);
     }
+    logout() {
+        this.model = {
+            email: null,
+            password: null
+        }
+        this.api.logout();
+    }
 }
