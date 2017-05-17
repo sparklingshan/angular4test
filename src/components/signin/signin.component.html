@@ -14,4 +14,7 @@
         <br>
         <button>Login</button>
     </form>
+    <div *ngIf="session !== null">
+        <h2>Hello {{user}}</h2>
+    </div>
 </div>

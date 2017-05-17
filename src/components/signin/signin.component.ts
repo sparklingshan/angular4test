@@ -11,9 +11,14 @@ import { store } from '../../services/store/app.store';
 })
 export class SigninComponent {
     session = store.getState().userToken;
+    user = null;
     constructor(private api: ApiService) {
+        if (store.getState().currentUser !== 'login') {
+            this.user = store.getState().currentUser;
+        }
         store.subscribe(() => {
             this.session = store.getState().userToken;
+            this.user = store.getState().currentUser;
         });
     }
     model = {

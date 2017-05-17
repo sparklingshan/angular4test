@@ -9,7 +9,10 @@ export class ApiService {
   token = '';
 
   logout() {
-    store.dispatch(userLogin(null));
+    store.dispatch(userLogin({
+      token: null,
+      currentUser: 'login'
+    }));
   }
 
   login(user) {
